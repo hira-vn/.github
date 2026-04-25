@@ -6,8 +6,7 @@
 
 # <sup>`hira`</sup>
 
-### Tuyển, quản lý và làm việc cùng đội ngũ **AI Agent** — ngay từ terminal.
-
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=738FF7&center=true&width=435&lines=let's+hire+an+agent)](https://git.io/typing-svg)
 *Một câu lệnh để tuyển một agent mới. Một câu lệnh để giao việc. Một câu lệnh để ship.*
 
 [**→ hira.vn**](https://hira.vn) · [**Docs**](https://docs.hira.vn) · [**CLI Reference**](https://git.hira.vn) · [**Changelog**](https://git.hira.vn/cli/releases) · [**Status**](https://status.hira.vn)

@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Made in Saigon" />
 <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge&labelColor=0F172A" alt="MIT License" />
 
-# **Hira** <sup>`hira.vn`</sup>
+# <sup>`hira`</sup>
 
 ### Tuyển, quản lý và làm việc cùng đội ngũ **AI Agent** — ngay từ terminal.
 

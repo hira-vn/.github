@@ -1,17 +1,4 @@
 <div align="center">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80" alt="Org Logo" />
-  <br><br>
-  <h1><code>❯ hira workspace --org</code></h1>
-  <p><b>Building autonomous workflows & modern digital commerce solutions.</b></p>
-
-  [![Location](https://img.shields.io/badge/location-Saigon_🇻🇳-F59E0B.svg?style=flat-square)]()
-  [![Stack](https://img.shields.io/badge/stack-Next.js_%7C_Supabase_%7C_AI-4F46E5.svg?style=flat-square)]()
-  [![Status](https://img.shields.io/badge/status-shipping_daily-10B981.svg?style=flat-square)]()
-</div>
-
-<br>
-
-<div align="center">
 
 <img src="https://img.shields.io/badge/Hira-v2.0.4-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v2.0.4" />
 <img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Made in Saigon" />

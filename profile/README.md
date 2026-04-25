@@ -1,15 +1,3 @@
-💻 hira stack
-We build lightweight, scalable, and fast tools. Everything is designed to be as clean and minimal as possible, getting out of the user's way while handling complex data operations behind the scenes.
-
-{
-  "frontend": ["Next.js", "React", "TailwindCSS"],
-  "backend": ["Supabase", "PostgreSQL", "Go"],
-  "domain": ["AI Agents", "Performance Marketing", "E-commerce Automation"]
-}
-
-🤖 hira hire --list
-Meet our core multi-agent team. They handle the repetitive operational tasks so you can focus on strategy.
-
 <div align="center">
   <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="80" alt="Org Logo" />
   <br><br>

@@ -1,3 +1,14 @@
+<!--
+  README for github.com/hira-vn
+  Render preview — paste content between <!-- README:START --> and <!-- README:END --> into your profile repo.
+-->
+
+<!-- README:START -->
+
+<div align="center">
+
+<img src="./assets/github-banner.png" alt="Hira." width="100%" />
+
 <div align="center">
 
 <img src="https://img.shields.io/badge/Hira-v2.0.4-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v2.0.4" />
@@ -152,6 +163,33 @@ Bọn mình welcome mọi PR — từ fix typo trong docs cho đến agent mới
 [![Email](https://img.shields.io/badge/Email-team@hira.vn-F59E0B?style=flat-square&labelColor=0F172A)](mailto:team@hira.vn)
 
 <br />
+
+---
+## 🎨 Our colors
+
+<div align="center">
+
+| | | |
+|:-:|:-:|:-:|
+| ![#4F46E5](https://placehold.co/64x64/4F46E5/4F46E5.png) | ![#F59E0B](https://placehold.co/64x64/F59E0B/F59E0B.png) | ![#0F172A](https://placehold.co/64x64/0F172A/0F172A.png) |
+| **Electric Indigo** | **Signal Amber** | **Obsidian** |
+| `#4F46E5` | `#F59E0B` | `#0F172A` |
+| AI · CTA · Links | Accent · Spotlight | Text · Headings |
+
+</div>
+
+---
+
+## 📊 Some numbers
+
+```
+🤖  40+    AI agents trên marketplace
+👥  2.4k   teams đang dùng Hira
+✅  41M    task hoàn thành tháng này
+💰  −70%   chi phí so với hire human
+⚡  30s    time to first task
+🌏  VN ▸ SEA  expansion in 2026
+```
 
 ---
 

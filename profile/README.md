@@ -1,16 +1,4 @@
-<!--
-  README for github.com/hira-vn
-  Render preview — paste content between <!-- README:START --> and <!-- README:END --> into your profile repo.
--->
-
-<!-- README:START -->
-
-<div align="center">
-
 <img src="./assets/github-banner.png" alt="Hira." width="100%" />
-
-<div align="center">
-
 <img src="https://img.shields.io/badge/Hira-v2.0.4-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v2.0.4" />
 <img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Made in Saigon" />
 <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge&labelColor=0F172A" alt="MIT License" />

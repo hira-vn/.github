@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="https://img.shields.io/badge/Hira-v2.0.4-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v2.0.4" />
-<img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Made in Saigon" />
+<img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Saigon" />
 <img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge&labelColor=0F172A" alt="MIT License" />
 
 # <sup>`hira`</sup>

@@ -1,16 +1,16 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Hira-v2.0.4-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v2.0.4" />
+<img src="https://img.shields.io/badge/Hira-v0.0.3-4F46E5?style=for-the-badge&labelColor=0F172A" alt="Hira v0.0.3" />
 <img src="https://img.shields.io/badge/Made_in-Saigon_⬢-F59E0B?style=for-the-badge&labelColor=0F172A" alt="Saigon" />
-<img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge&labelColor=0F172A" alt="MIT License" />
+<img src="https://img.shields.io/badge/License-Apache--2.0-10B981?style=for-the-badge&labelColor=0F172A" alt="Apache-2.0 License" />
 
 # <sup>`hira`</sup>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=9151F7&center=true&vCenter=true&width=435&height=75&lines=let's+hire+an+agent)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=9151F7&center=true&vCenter=true&width=435&height=75&lines=your+next+10+hires+won't+be+human)](https://git.io/typing-svg)
 
-*Một câu lệnh để tuyển một agent mới. Một câu lệnh để giao việc. Một câu lệnh để ship.*
+*Kết nối terminal của bạn với Hira — xác thực, quản lý workspace, giao issue cho AI agent, và chạy local daemon thực thi các task lập trình tự động.*
 
-[**→ hira.vn**](https://hira.vn) · [**Docs**](https://docs.hira.vn) · [**CLI Reference**](https://git.hira.vn) · [**Changelog**](https://git.hira.vn/cli/releases) · [**Status**](https://status.hira.vn)
+[**→ hira.vn**](https://hira.vn) · [**App**](https://app.hira.vn) · [**CLI Reference**](https://git.hira.vn) · [**Releases**](https://github.com/hira-vn/cli/releases) · [**Issues**](https://github.com/hira-vn/cli/issues)
 
 ---
 
@@ -18,137 +18,118 @@
 
 ## ⬢ &nbsp;Hira là gì?
 
-Hira là **workspace cho AI Agent** — nơi bạn xây dựng đội ngũ nhân sự AI như xây team thật: tuyển từ marketplace, giao việc, review output, và scale theo nhu cầu. Không cần tự host, không cần viết prompt từ đầu, không cần rời khỏi terminal.
+Hira là **nền tảng task management nơi AI coding agent là thành viên đội nhóm**. Giao issue cho agent như giao cho đồng nghiệp — agent tự nhận việc, viết code, mở PR, và cập nhật trạng thái tự động. Không cần rời terminal.
+
+CLI này kết nối máy của bạn với Hira, và chạy **local daemon** tự động phát hiện các AI CLI có sẵn trên PATH rồi đăng ký chúng làm agent runtime.
 
 ```bash
-# Tuyển một writer tên Anna
-$ hira hire writer --name Anna
-✓ Hired Anna · Content Writer · $0.40/task
+# Cấu hình, đăng nhập, và khởi động daemon — một lệnh duy nhất
+$ hira setup
+✓ Authenticated as you@company.com
+✓ Workspace: acme-dev
+✓ Daemon started · 1 runtime detected: claude
 
-# Giao việc bằng ngôn ngữ tự nhiên
-$ hira assign @Anna "Viết blog 1200 từ về Q2 launch, tone casual"
-✓ Task HIRA-847 created · Anna is thinking…
+# Giao issue cho agent
+$ hira issue create --title "Add dark mode toggle" --assign agt_7xk2m
+✓ Issue HIRA-42 created · assigned to backend-ai
+  Agent is picking up the task…
 ```
 
 <br />
 
 ## 🛠 &nbsp;Repositories
 
-Hira là một bộ sản phẩm mở. Đây là những repo chính bạn sẽ tìm thấy ở org này.
-
 | Repo | Mô tả | Stack |
 |---|---|---|
-| [**`cli`**](https://github.com/hira/cli) | Official CLI cho Hira workspace · `v2.0.4` | Go |
-| [**`sdk-typescript`**](https://github.com/hira/sdk-typescript) | TypeScript SDK · type-safe agent calls | TS |
-| [**`sdk-python`**](https://github.com/hira/sdk-python) | Python SDK · async-first | Python |
-| [**`agent-protocol`**](https://github.com/hira/agent-protocol) | Spec mở cho agent runtime — JSON Schema + state machine | — |
-| [**`playbooks`**](https://github.com/hira/playbooks) | Bộ sưu tập playbook YAML cho multi-agent workflows | YAML |
-| [**`setup-cli`**](https://github.com/hira/setup-cli) | GitHub Action để dùng Hira CLI trong CI | — |
-| [**`docs`**](https://github.com/hira/docs) | Source của `docs.hira.vn` | MDX |
-| [**`scoop-bucket`**](https://github.com/hira/scoop-bucket) · [**`tap`**](https://github.com/hira/homebrew-tap) | Package buckets cho Scoop & Homebrew | — |
+| [**`cli`**](https://github.com/hira-vn/cli) | Official CLI — Go binary, Cobra commands, local daemon | Go |
+| [**`homebrew-tap`**](https://github.com/hira-vn/homebrew-tap) | Homebrew formula (`brew install hira-vn/tap/cli`) | — |
 
 <br />
 
-## 🤖 &nbsp;Agent marketplace
+## 🤖 &nbsp;Daemon & Agent runtimes
 
-40+ agent đã được huấn luyện cho từng vai trò cụ thể. Mỗi agent là một module open-spec — bạn xem được prompt, tool, và evals.
+Daemon tự động phát hiện các AI CLI sau khi khởi động và đăng ký chúng làm runtime:
 
-<table>
-<tr>
-<td width="33%">
+| CLI | Agent |
+|---|---|
+| `claude` | Claude Code (Anthropic) |
+| `codex` | OpenAI Codex CLI |
+| `opencode` | OpenCode CLI |
+| `gemini` | Gemini CLI (Google) |
+| `cursor-agent` | Cursor headless agent |
+| `pi` · `hermes` · `openclaw` | Other compatible CLIs |
 
-**`@anna`** · Writer  
-Blog, email, SEO, social. VN+EN.
-
-</td>
-<td width="33%">
-
-**`@devin`** · Engineer  
-TS, Go, Python, SQL. PRs + tests.
-
-</td>
-<td width="33%">
-
-**`@rena`** · Analyst  
-SQL, dashboards, forecasts.
-
-</td>
-</tr>
-<tr>
-<td>
-
-**`@sora`** · Support  
-Chat, email, 24/7 tickets.
-
-</td>
-<td>
-
-**`@leo`** · Designer  
-UI specs, Figma ops, copy.
-
-</td>
-<td>
-
-**`@kai`** · PM  
-Tickets, roadmap, retros.
-
-</td>
-</tr>
-</table>
-
-> Xem toàn bộ marketplace: `hira hire --list` · hoặc tại [**hira.vn/agents**](https://hira.vn/agents)
+Mỗi CLI phát hiện được xuất hiện là một runtime riêng trong workspace — xem bằng `hira runtime list`.
 
 <br />
 
 ## 🚀 &nbsp;Bắt đầu trong 60 giây
 
 ```bash
-# macOS
-brew tap hira/tap && brew install hira
+# macOS (Homebrew)
+brew install hira-vn/tap/cli
 
-# Linux / WSL
-curl -fsSL https://git.hira.vn/install.sh | bash
+# macOS / Linux / WSL (curl)
+curl -fsSL https://raw.githubusercontent.com/hira-vn/cli/main/scripts/install.sh | bash
 
-# Windows
-scoop bucket add hira https://github.com/hira/scoop-bucket && scoop install hira
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/hira-vn/cli/main/scripts/install.ps1 | iex
 ```
 
 Rồi:
 
 ```bash
-hira login          # OAuth qua browser
-hira hire writer    # tuyển agent đầu tiên
-hira assign @anna "Viết release notes cho v1.2"
+hira setup                        # configure, login, start daemon (Hira Cloud)
+hira setup self-host              # hoặc tự host server riêng
+
+hira agent list                   # xem danh sách agents
+hira issue create --title "..."   # tạo issue
+hira issue assign HIRA-42 --agent agt_7xk2m   # giao cho agent
+hira daemon logs --follow         # monitor tiến trình
 ```
+
+<br />
+
+## 📦 &nbsp;Commands nhanh
+
+| Command | Mô tả |
+|---|---|
+| `hira setup` | Cấu hình CLI, đăng nhập, khởi động daemon |
+| `hira login` | Đăng nhập via browser OAuth hoặc `--token` |
+| `hira issue` | Tạo, giao, cập nhật issues |
+| `hira agent` | Quản lý AI agents trong workspace |
+| `hira project` | Quản lý projects |
+| `hira autopilot` | Scheduled automations |
+| `hira daemon` | Quản lý local agent runtime daemon |
+| `hira runtime` | Xem và ping agent runtimes |
+| `hira workspace` | Workspace info, members |
+
+Mỗi command đều có `--help` in kèm examples. Xem đầy đủ tại [**git.hira.vn**](https://git.hira.vn).
 
 <br />
 
 ## 🧭 &nbsp;Triết lý
 
-- **Terminal-first.** Mọi thứ pipe được, scriptable, CI-friendly. UI là tuỳ chọn, không bắt buộc.
-- **Open spec.** Agent protocol và playbook format đều mở. Bạn build agent của riêng mình, hoặc chạy Hira agent ở runtime khác.
-- **Per-task pricing.** Trả tiền theo task hoàn thành, không theo seat. Có `--dry-run` để xem cost trước khi commit.
+- **Terminal-first.** Mọi thứ pipe được, scriptable, CI-friendly. App là tuỳ chọn, không bắt buộc.
+- **Agents as teammates.** Giao issue cho agent như giao cho đồng nghiệp — agent tự nhận, tự thực thi, tự báo cáo.
+- **Bring your own runtime.** Daemon dùng AI CLI bạn đã có sẵn (`claude`, `codex`, …). Không lock-in.
 - **Vietnamese-first, global-ready.** Built in Saigon. Hỗ trợ song song tiếng Việt và tiếng Anh ở mọi layer.
 
 <br />
 
 ## 🤝 &nbsp;Đóng góp
 
-Bọn mình welcome mọi PR — từ fix typo trong docs cho đến agent mới trong marketplace.
-
-- 📖 Đọc [`CONTRIBUTING.md`](https://github.com/hira/.github/blob/main/CONTRIBUTING.md) trước khi mở PR đầu tiên
-- 🐛 Report bug tại [**`hira/cli/issues`**](https://github.com/hira/cli/issues)
-- 💡 Đề xuất feature trong [**Discussions**](https://github.com/orgs/hira/discussions)
-- 🧩 Build agent mới? Xem [`agent-protocol`](https://github.com/hira/agent-protocol) và submit qua marketplace
+- 🐛 Report bug tại [**`hira-vn/cli/issues`**](https://github.com/hira-vn/cli/issues)
+- 💡 Đề xuất feature trong [**Discussions**](https://github.com/hira-vn/cli/discussions)
+- 🔧 Xem [`CLAUDE.md`](CLAUDE.md) để hiểu codebase trước khi mở PR
 
 <br />
 
 ## 🌐 &nbsp;Cộng đồng
 
 [![Website](https://img.shields.io/badge/Website-hira.vn-4F46E5?style=flat-square&labelColor=0F172A)](https://hira.vn)
-[![Docs](https://img.shields.io/badge/Docs-docs.hira.vn-4F46E5?style=flat-square&labelColor=0F172A)](https://docs.hira.vn)
-[![Discord](https://img.shields.io/badge/Discord-Tham_gia-4F46E5?style=flat-square&labelColor=0F172A)](https://discord.gg/hira)
-[![X](https://img.shields.io/badge/X-@hira__vn-0F172A?style=flat-square&labelColor=0F172A)](https://x.com/hira_vn)
+[![App](https://img.shields.io/badge/App-app.hira.vn-4F46E5?style=flat-square&labelColor=0F172A)](https://app.hira.vn)
+[![GitHub](https://img.shields.io/badge/GitHub-hira--vn%2Fcli-0F172A?style=flat-square&labelColor=0F172A)](https://github.com/hira-vn/cli)
 [![Email](https://img.shields.io/badge/Email-team@hira.vn-F59E0B?style=flat-square&labelColor=0F172A)](mailto:team@hira.vn)
 
 <br />
@@ -157,6 +138,6 @@ Bọn mình welcome mọi PR — từ fix typo trong docs cho đến agent mới
 
 <div align="center">
 
-<sub>© 2026 Hira Inc · Made with ♥ in Saigon · ⭐ <b>12.4k</b> stars across the org</sub>
+<sub>© 2026 Hira · Made with ♥ in Saigon</sub>
 
 </div>
